@@ -1,0 +1,48 @@
+{
+  "id": "did:web:credentials.credivera.io",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:credentials.credivera.io"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://credentials.credivera.io/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/1a634188-a455-4949-b3a7-d82e50e6ebed"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#8ddc147009134d2498845cd5f64e919avcSigningKey-fc41f",
+      "controller": "did:web:credentials.credivera.io",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "H4zqRItTLIdQp4lmzfks1Kyuz5sYejj28ATf5ENSY-M",
+        "y": "vZHE-jJzZF9uHtPqxl159Bv6tk1vStcc48jM3Ttxp7E"
+      }
+    }
+  ],
+  "authentication": [
+    "#8ddc147009134d2498845cd5f64e919avcSigningKey-fc41f"
+  ],
+  "assertionMethod": [
+    "#8ddc147009134d2498845cd5f64e919avcSigningKey-fc41f"
+  ]
+}
